@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Blinker, arial, sans-serif;
+}
+
+/* Global Styles*/
+
+a {
+  color: black;
+  text-decoration-color: transparent;
+  transition: 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  padding: 5rem 0;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+.color-primary {
+  color: #d81414;
+}
+
+/* Navigation */
+
+.nav {
+  box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.2);
+  height: 88px;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+.nav__logo {
+  width: 80px;
+}
+
+.nav__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  text-decoration-color: black;
+}
+
+.nav__menu {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* Menu */
+
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.open .menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__close {
+  position: absolute;
+  top: 32px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu__link {
+  font-size: 1.5rem;
+}
+
+.menu__link:hover {
+  text-decoration-color: black;
+}
+
+/* Header */
+
+.header__row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header__grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header__grid {
+  width: calc(50% - 8px);
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.header__grid__title {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.header__grid__img {
+  filter: brightness(80%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s ease;
+}
+
+.header__grid:hover .header__grid__img {
+  filter: brightness(55%);
+}
+
+/* Products */
+
+.products__row {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.products__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  width: calc(25% - 0.75rem);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.product:hover {
+  border-color: black;
+}
+
+.product__img {
+  width: 100%;
+}
+
+.product__details {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product__details__title {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.product__details__price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Banner */
+
+.banner {
+  display: flex;
+  background: #e9e9e9;
+  height: 400px;
+}
+
+.banner__text,
+.banner__img {
+  width: 50%;
+}
+
+.banner__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 7.5rem;
+}
+
+.banner__text__title {
+  font-size: 2rem;
+}
+
+.banner__text__para {
+  font-size: 1.1rem;
+}
+
+.banner__text__btn {
+  background: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  border: 2px solid black;
+  padding: 0.75rem;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+}
+
+.banner__text__btn:hover {
+  background: transparent;
+  color: black;
+}
+
+.banner__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Banner 2 */
+
+.banner-2 {
+  flex-direction: row-reverse;
+}
+
+/* Newsletter */
+
+#newsletter {
+  background: #191919;
+  color: white;
+}
+
+.newsletter__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.newsletter__title {
+  font-size: 2.25rem;
+}
+
+.newsletter__form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter__form__input {
+  width: 240px;
+  height: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.newsletter__form__submit {
+  height: 100%;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+}
+
+/* Footer */
+
+footer {
+  background: black;
+  color: white;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 0.75rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer__link {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.footer__link:hover {
+  text-decoration-color: white;
+}
+
+/* LG Screens - Laptops */
+
+@media screen and (max-width: 1024px) {
+  .product__details__title {
+    font-size: 1rem;
+  }
+
+  .banner__text {
+    padding: 0 5rem;
+  }
+}
+
+/* MD Screens - Tablets */
+
+@media screen and (max-width: 768px) {
+  .product {
+    width: calc(100% / 3 - 2rem / 3);
+  }
+
+  .banner__text {
+    width: 100%;
+  }
+
+  .banner__img {
+    display: none;
+  }
+}
+
+/* SM Screens */
+
+@media screen and (max-width: 640px) {
+  .nav__links {
+    display: none;
+  }
+
+  .nav__menu {
+    display: block;
+  }
+
+  .header__title {
+    text-align: center;
+  }
+
+  .header__grid__title {
+    font-size: 1.5rem;
+    left: 12px;
+  }
+
+  .product {
+    width: calc(50% - 0.5rem);
+  }
+
+  .banner__text {
+    padding: 0 2.5rem;
+  }
+}
+
+/* Mobile devices */
+
+@media screen and (max-width: 480px) {
+  .header__grid__title {
+    left: 4px;
+    bottom: 4px;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .newsletter__form {
+    flex-direction: column;
+  }
+
+  .newsletter__form__input {
+    text-align: center;
+  }
+}
